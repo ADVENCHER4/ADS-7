@@ -39,8 +39,7 @@ class TPQueue {
                 head = tmp;
             } else {
             cur = head;
-            for (int j = 0; j < ind - 1; j++)
-            {
+            for (int j = 0; j < ind - 1; j++) {
                 cur = cur->next;
             }
             Item* tmp = new Item;
@@ -50,7 +49,7 @@ class TPQueue {
             }
         }
     }
-    T& pop() {
+    T pop() {
         if (head == nullptr) {
             throw std::string("Empty");
         } else {
@@ -61,8 +60,7 @@ class TPQueue {
             return val;
         }
     }
-    ~TPQueue()
-    {
+    ~TPQueue() {
         while (head) {
             Item* tmp = head->next;
             delete head;
